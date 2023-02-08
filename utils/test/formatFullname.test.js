@@ -14,4 +14,9 @@ describe('formatFullname', () => {
     it('should return an error if "formatFullName" arg length is 0', () => {
         expect(formatFullname()).to.equal('Error');
     });
+    it('should return proper formatting "formatFullName" for args', () => {
+        expect(formatFullname('JOHN DOE')).to.equal('John Doe');
+        expect(formatFullname('johN dOe')).to.equal('John Doe');
+        expect(formatFullname('john doe')).to.equal('John Doe');
+    });
 });
